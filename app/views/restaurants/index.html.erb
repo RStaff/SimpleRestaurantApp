@@ -1,0 +1,16 @@
+<h1>List of ALL Restaurants</h1>
+
+<% @restaurant.each do |restaurant| %>
+   Restaurant name: <%= restaurant.name%>
+   Restaurant description: <%= restaurant.description%></br>
+   Restaurant address : <%= restaurant.address%></br>
+   Restaurant phone number: <%= restaurant.phone_number%></br>
+   <%= link_to('Info on Restaurant Above', { action: "show", id: restaurant.id}) %>
+   </br>	
+   <%end%>
+   </br>
+
+   <%= link_to 'New Restaurant', new_restaurant_path	 %>
+
+
+

@@ -1,0 +1,10 @@
+<h1>List of All Best Restaurants</h1>
+
+#action to be shown then what will be shown
+<%@restaurant.each do |restaurant|%> 
+Restaurant<=% restaurant.name %>
+Restaurant description <=% restaurant.description%>
+Restaurant address <%= restaurant.address%>
+Restaurant phone_number <%= restaurant.phone_number %>
+<%end>
+
