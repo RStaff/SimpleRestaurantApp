@@ -5,10 +5,41 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewpoint" content="width=device-width, initital-scale=1.0">
 </head>
 <body>
+<div class="navbar navbar-fixed-top ">
+  <div class="navbar-inner ">
+  	<div class="container">
+  	  <a class="btn btn-navbar" data-toggle="collapse"
+data-target=".nav=collapse">
+		<span class="icon-bar"</span>
+		<span class="icon-bar"</span>
+		<span class="icon-bar"</span>
+	</a>
+    <a class="brand" href="#">Best Restaurants</a>
+    <div class="nav-collapse">
+    	<ul class="nav">
+    	  <li><%= link_to "Browse Restaurants", restaurants_path %><li>
+          <li><%= link_to "Restaurant Prices" %><li>
+          <li><%= link_to "Contact Us" %><li>
+          <li><%= link_to "Shopping Cart" %><li>
+        <ul>
+    </div>
+  </div>
+</div>
 
-<%= yield %>
-
+<div class="container"> 
+	<div class="row">
+      <div class="span9"><%= yield %></div>
+      <div class="span3"></div>
+      	<h2>About Us</h2>
+      	Lorem ipsum dolor sit amet, consectetur.........
+      	...........................
+      	.............................
+      	........................
+      </div>
+    </div>
+</div>
 </body>
 </html>

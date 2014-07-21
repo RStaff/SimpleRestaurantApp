@@ -15,6 +15,7 @@ class RestaurantsController < ApplicationController
     #create restraunt and redirect to Show
   end
 
+
   def edit
     @restaurant = Restaurant.find params[:id]
   end
@@ -26,7 +27,7 @@ class RestaurantsController < ApplicationController
       redirect_to restaurants_path(@restaurant)
     end
   end 
- 
+
 
   def destroy
     #remove the  restaunratn from the list
@@ -41,12 +42,13 @@ class RestaurantsController < ApplicationController
 
 
   def show
+
       @restaurant = Restaurant.find(params[:id])
   end
 
   private
     def restaurant_params
-      params.require(:restaurant).permit(:name, :description, :address, :phone_number, :image)
+      params.require(:restaurant).permit :name, :description, :address, :phone_number, :photo, :image, :menu
     end
 end
 
