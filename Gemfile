@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem "parsley-rails"
 
+gem 'rails_admin'
+
 gem 'dotenv-rails', :groups => [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -17,6 +19,17 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 gem 'less-rails'
 #gem 'rspec' group :development, :test
+
+gem 'devise' 
+
+gem'better_errors'
+gem 'binding_of_caller'
+gem 'pry-rails'
+gem 'pry-stack_explorer'
+gem 'annotate'
+#gem 'pry-debugger'
+
+
 
 gem 'twitter-bootstrap-rails'
 	

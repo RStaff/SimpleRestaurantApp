@@ -5,15 +5,15 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
-      <th><%= model_class.human_attribute_name(:phone_number) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%= model_class.human_attribute_name(:restaurant) %></th>
-      <th><%= model_class.human_attribute_name(:menu) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th class='list-heading'><%= model_class.human_attribute_name(:id) %></th>
+      <th class='list-heading'><%= model_class.human_attribute_name(:name) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:description) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:address) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:phone_number) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:created_at) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:restaurant) %></th>
+      <th  class='list-heading'><%= model_class.human_attribute_name(:menu) %></th>
+      <th  class='list-heading'><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +24,7 @@
         <td><%= restaurant.description %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone_number %></td>
-        <td><%=l restaurant.created_at %></td>
+        <td><%= link_to time_ago_in_words(restaurant.created_at) +  "ago" %></td>
         <td><%= image_tag(restaurant.image_url(:thumb).to_s) %></td>
         <td><%= image_tag(restaurant.menu_url(:thumb_nail).to_s) %></td>
         <td>
@@ -37,6 +37,8 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
+
+
     <% end %>
   </tbody>
 </table>

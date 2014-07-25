@@ -14,3 +14,16 @@
  *= require_self
  */
 
+.list-heading{
+	padding-left:  50px;
+}
+
+/*body {
+	overflow: auto;
+}*/
+
+.welcome{
+	color:blue;
+	margin-left: 2em;
+
+}
